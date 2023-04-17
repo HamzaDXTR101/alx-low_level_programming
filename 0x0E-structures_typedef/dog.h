@@ -3,9 +3,11 @@
 
 /**
  * struct dog - Dog attributes
- * @name: His  name of the dog. ! 
- * @age: His age of the dog. ! 
- * @owner: his owner of the dog!.
+ * @name: The name of the dog.
+ * @age: The age of the dog.
+ * @owner: The owner of the dog.
+ *
+ * Description: The attributes of a dog.
  */
 struct dog
 {
@@ -25,4 +27,3 @@ dog_t *new_dog(char *name, float age, char *owner);
 void free_dog(dog_t *d);
 
 #endif
-

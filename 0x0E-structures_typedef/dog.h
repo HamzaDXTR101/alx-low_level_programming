@@ -1,21 +1,28 @@
-#include <stdio.h>
-#include <stdlib.h>
+#ifndef _HEADER_
+#define _HEADER_
 
-/*
- *  Poppy
- *  Struct add elemnets
+/**
+ * struct dog - Dog attributes
+ * @name: His  name of the dog. ! 
+ * @age: His age of the dog. ! 
+ * @owner: his owner of the dog!.
  */
-typedef struct dog {
-    char *name;
-    float age;
-    char *owner;
-} dog;
+struct dog
+{
+	char *name;
+	float age;
+	char *owner;
+};
 
-int main() {
-    dog my_dog;
-    my_dog.name = "Poppy";
-    my_dog.age = 3.5;
-    my_dog.owner = "Bob";
-    printf("My name is %s  , and I am %.1f , Owner %s ", my_dog.name, my_dog.age, my_dog.owner);
-    return (0);
-}
+/**
+ * dog_t - Typedef for dog structure
+ */
+typedef struct dog dog_t;
+
+void init_dog(struct dog *d, char *name, float age, char *owner);
+void print_dog(struct dog *d);
+dog_t *new_dog(char *name, float age, char *owner);
+void free_dog(dog_t *d);
+
+#endif
+

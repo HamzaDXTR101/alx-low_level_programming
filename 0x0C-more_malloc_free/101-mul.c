@@ -5,10 +5,10 @@
 #define ERR_MSG "Error"
 
 /**
- * is_digit - Checks if a string contains a Non-digit char
- * @s: String to be evaluated
+ * is_digit - checks if a string contains a non-digit char
+ * @s: string to be evaluated
  *
- * Return: 0 if a Non-digit is found, 1 otherwise
+ * Return: 0 if a non-digit is found, 1 otherwise
  */
 int is_digit(char *s)
 {

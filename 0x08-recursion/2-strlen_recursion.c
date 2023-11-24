@@ -1,18 +1,21 @@
 #include "main.h"
 
 /**
-  * factorial - function parameter
+  * _strlen_recursion - main function
   *
-  * @n: function parameter
+  * @s: Function parameter
   *
-  * Return: Function n.
+  * Return: Length
   */
-int factorial(int n)
+int _strlen_recursion(char *s)
 {
-	if (n < 0)
-	return (-1);
-	if (n == 0)
-	return (1);
-	return (n * factorial(n - 1));
+	int lnt = 0;
+
+	if (*s)
+	{
+	lnt++;
+	lnt += _strlen_recursion(s + 1);
+	}
+	return (lnt);
 }
 
